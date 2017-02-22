@@ -30,8 +30,12 @@ information).
 
 • Get the webpage. In this case: https://www.packtpub.com/packt/offers/free-learning/
 
-### TODO
-
 • Search the title for the book of the day.
 
+### TODO
+
 • Notificate the title of the book.
+
+### FIXME
+
+• Fix the string of the Title. We must clean-it.

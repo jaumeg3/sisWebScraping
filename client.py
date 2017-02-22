@@ -10,6 +10,8 @@ Simple WebScraping using URLLIB2
 """
 
 import urllib2
+from bs4 import BeautifulSoup
+
 
 class Client(object):
     """
@@ -32,6 +34,17 @@ class Client(object):
         f.close()
         return html
 
+    def parse_web_page(self, html):
+        """
+        Parses an html page searching the title of the free book.
+        :param html: Source code of the page.
+        :return: The title of the free book
+        """
+        soup = BeautifulSoup(html, 'html.parser')
+        result = soup.find("div", "dotd-title")
+        book = result.find("h2")
+        return book.text if book else "Error"
+
     def run(self):
         """
         Retrieves the title of the free book of the day from the web page:
@@ -40,4 +53,9 @@ class Client(object):
         """
         html = self.get_web_page("https://www.packtpub.com/packt/offers/free"
                                  "-learning/")
-        print(html)
+        result = self.parse_web_page(html)
+        print result
+
+if __name__ == "__main__":
+    client = Client()
+    client.run()
