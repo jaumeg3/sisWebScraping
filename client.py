@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # vim: set fileencoding=utf8 :
 """
-Simple WebScraping using URLLIB2
+Simple WebScraping using URLLIB2 and BeautifulSoup.
 
 @author: Jaume Giralt Barbé
 @author: Nil Agut Marín
@@ -38,23 +38,27 @@ class Client(object):
         """
         Parses an html page searching the title of the free book.
         :param html: Source code of the page.
-        :return: The title of the free book
+        :return: The title of the free book.
         """
         soup = BeautifulSoup(html, 'html.parser')
         result = soup.find("div", "dotd-title")
         book = result.find("h2")
         return book.text if book else "Error"
 
+    def clean_result(self, result):
+        return result.replace("\t", "").replace("\n", "")
+
     def run(self):
         """
         Retrieves the title of the free book of the day from the web page:
-        https://www.packtpub.com/packt/offers/free-learning/ and print it
-        :return: The title of the free book
+        https://www.packtpub.com/packt/offers/free-learning/ and print it.
+        :return: The title of the free book.
         """
         html = self.get_web_page("https://www.packtpub.com/packt/offers/free"
                                  "-learning/")
         result = self.parse_web_page(html)
-        print result
+        title = self.clean_result(result)
+        print title
 
 if __name__ == "__main__":
     client = Client()

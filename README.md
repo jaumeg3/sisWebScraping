@@ -32,10 +32,10 @@ information).
 
 • Search the title for the book of the day.
 
+• Fix the string of the Title. We must clean-it.
+
 ### TODO
 
 • Notificate the title of the book.
 
 ### FIXME
-
-• Fix the string of the Title. We must clean-it.
