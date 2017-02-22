@@ -26,9 +26,11 @@ information).
 
 • Code must work.
 
-### TODO
+### DONE
 
 • Get the webpage. In this case: https://www.packtpub.com/packt/offers/free-learning/
+
+### TODO
 
 • Search the title for the book of the day.
 
