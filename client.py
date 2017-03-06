@@ -5,8 +5,6 @@
 Simple WebScraping using URLLIB2 and BeautifulSoup.
 
 @author: Jaume Giralt Barbé
-@author: Nil Agut Marín
-@author: Jordi Blanco López
 """
 
 import urllib2
