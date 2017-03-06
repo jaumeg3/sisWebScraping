@@ -1,6 +1,6 @@
 # Simple WebScraping
 
-### Introduction
+### • Introduction
 
 PACKT editor releases each day a different free book on its webpage, we want
 to know, each morning, the title of the book, so we can decide if we want to
@@ -17,7 +17,7 @@ To scrape some text, namely the book title, from the webpage, and print it
 (with the ultimate goal of using any notification method to send the user the
 information).
 
-### Requirements
+### • Requirements
 
 • Code must be developed entirely on github.com.
 
@@ -26,7 +26,7 @@ information).
 
 • Code must work.
 
-### DONE
+### • DONE
 
 • Get the webpage. In this case: https://www.packtpub.com/packt/offers/free-learning/
 
@@ -34,8 +34,8 @@ information).
 
 • Fix the string of the Title. We must clean-it.
 
-### TODO
-
 • Notificate the title of the book.
 
-### FIXME
+### • TODO
+
+### • FIXME

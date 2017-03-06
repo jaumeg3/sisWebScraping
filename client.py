@@ -44,6 +44,11 @@ class Client(object):
         return book.text if book else "Error"
 
     def clean_result(self, result):
+        """
+        Remove the unused characters of the string like tabulations and spaces
+        :param result: String with the title and tabulations
+        :return: String with the title
+        """
         return result.replace("\t", "").replace("\n", "")
 
     def run(self):
